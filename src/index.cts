@@ -10,7 +10,6 @@
   If you use this code, please retain this notice and the original repository links as credit to the original authors.
 */
 
-
 // biome-ignore  lint/suspicious/noExplicitAny : just types def
 type Fn = (...args: any[]) => any;
 // biome-ignore  lint/suspicious/noExplicitAny : just types def
@@ -61,7 +60,7 @@ const fastApply: FastApply = (fn, context, args) => {
   }
 };
 // biome-ignore  lint/suspicious/noExplicitAny : entries are may be any or unknown
-function dequal(actual: any, expected: any, strict?: boolean) {
+function mesco(actual: any, expected: any, strict?: boolean) {
   if (actual === expected) return true;
 
   // isNaN test
@@ -146,10 +145,10 @@ function dequal(actual: any, expected: any, strict?: boolean) {
 
   while (--i >= 0) {
     key = actualKeys[i];
-    if (!dequal(actual[key], expected[key], strict)) return false;
+    if (!mesco(actual[key], expected[key], strict)) return false;
   }
 
   return true;
 }
 
-export = dequal;
+export = mesco;
