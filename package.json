@@ -37,7 +37,8 @@
     "readme.md"
   ],
   "publishConfig": {
-    "access": "public"
+    "access": "public",
+    "provenance": true
   },
   "repository": {
     "url": "git+https://github.com/phothinmg/mesco",
